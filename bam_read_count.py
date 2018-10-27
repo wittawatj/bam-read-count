@@ -7,7 +7,6 @@ from builtins import int
 from future import standard_library
 standard_library.install_aliases()
 import csv
-import argparse
 import sys
 import re
 
@@ -71,12 +70,6 @@ def process_csv(input_path, dest_csv, input_delimiter='\t', output_delimiter='\t
 
 
 def main():
-    # parser = argparse.ArgumentParser(description='PyTorch GKMM on MNIST. Some paths are relative to the "(share_path)/prob_models/". See settings.ini for (share_path).')
-
-    # parser.add_argument('--input', type=str, help='Path to the input CSV file',
-    #         required=True)
-    # args = parser.parse_args()
-    # args_dict = vars(args)
     if len(sys.argv) < 3:
         print('Usage: {} path_to_input_text_file  path_to_output_csv'.format(sys.argv[0]))
         print('Both input and output files are tab separated.')
